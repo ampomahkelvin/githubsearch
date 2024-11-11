@@ -1,11 +1,8 @@
 import { UserType } from "../types";
-import {
-  MapPinIcon,
-  LinkIcon,
-  BuildingOffice2Icon,
-} from "@heroicons/react/24/outline";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import LocationPinIcon from "../assets/icon-location.svg";
+import LinkIcon from "../assets/icon-website.svg";
+import CompanyIcon from "../assets/icon-company.svg";
+import TwitterIcon from "../assets/icon-twitter.svg"
 
 type Props = {
   userData: UserType;
@@ -68,7 +65,7 @@ const Card = ({ userData }: Props) => {
 
         <ul className="xs:flex xs:flex-col md:grid md:grid-cols-2 sm:grid sm:grid-cols-2 gap-5">
           <li className="flex items-center gap-2">
-            <MapPinIcon className="w-5 h-5 text-gray-500 dark:text-gray-300" />
+            <img src={LocationPinIcon} className="w-5 h-5 text-gray-500 dark:text-gray-300" />
             <span
               className={
                 userData.location ? "dark:text-white" : "text-gray-400"
@@ -78,7 +75,7 @@ const Card = ({ userData }: Props) => {
             </span>
           </li>
           <li className="flex items-center gap-2">
-            <FontAwesomeIcon icon={faTwitter} className="text-light-gray" />
+            <img src={TwitterIcon} className="text-light-gray" />
             {userData.twitter_username ? (
               <a
                 href={`https://twitter.com/${userData.twitter_username}`}
@@ -91,7 +88,7 @@ const Card = ({ userData }: Props) => {
             )}
           </li>
           <li className="flex items-center gap-2 hover:underline cursor-pointer">
-            <LinkIcon className="w-5 h-5 text-gray-500 dark:text-gray-300" />
+            <img src={LinkIcon} className="w-5 h-5 text-gray-500 dark:text-gray-300" />
             <span
               className={
                 userData.html_url
@@ -107,7 +104,7 @@ const Card = ({ userData }: Props) => {
             </span>
           </li>
           <li className="flex items-center gap-2">
-            <BuildingOffice2Icon className="w-5 h-5 text-gray-500 dark:text-gray-300" />
+            <img src={CompanyIcon} className="w-5 h-5 text-gray-500 dark:text-gray-300" />
             <span
               className={
                 userData.company

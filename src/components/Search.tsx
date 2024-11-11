@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
+import  SearchIcon  from "../assets/icon-search.svg";
 import { ChangeEvent, KeyboardEvent } from "react";
 
 type Props = {
@@ -18,7 +18,7 @@ const Search = ({ username, onInputChange, onSearch, showError }: Props) => {
   return (
     <div className="flex bg-light-background mt-9 rounded-md shadow-xl h-[69px] dark:bg-dark-background">
       <div className="flex w-full items-center ">
-        <MagnifyingGlassIcon className="h-8 pl-8 text-primary" />
+        <img src={SearchIcon} className="h-8 pl-8 text-primary" />
         <div className="flex w-full justify-between">
           <input
             type="text"
