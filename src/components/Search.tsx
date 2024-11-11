@@ -16,8 +16,8 @@ const Search = ({ username, onInputChange, onSearch, showError }: Props) => {
   };
 
   return (
-    <div className="flex bg-light-background mt-9 rounded-md shadow-xl h-[69px]">
-      <div className="flex w-full items-center">
+    <div className="flex bg-light-background mt-9 rounded-md shadow-xl h-[69px] dark:bg-dark-background">
+      <div className="flex w-full items-center ">
         <MagnifyingGlassIcon className="h-8 pl-8 text-primary" />
         <div className="flex w-full justify-between">
           <input
@@ -26,7 +26,7 @@ const Search = ({ username, onInputChange, onSearch, showError }: Props) => {
             value={username}
             onChange={onInputChange}
             onKeyDown={handleKeyPress}
-            className="pl-6 outline-none w-full"
+            className="pl-6 outline-none w-full dark:bg-dark-background"
           />
           {showError && (
             <span className="text-red-500 text-sm whitespace-nowrap">
